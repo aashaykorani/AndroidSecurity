@@ -1,0 +1,14 @@
+1) What are the two types of Intents?
+A - Implicit and Explicit intents.
+
+2) Which of the two types of Intents is more secure?
+A - Explicit intent is more secure because here a target component/activity is specified in the code. Therefore, only that component/activity will be invoked. Whereas, an implicit intent specifies an action that can invoke any app on the device able to perform the action.
+
+3) What type of Intent is shown on lines 69 to 73 of SecondFragment.kt?
+A - Implicit intent.
+
+4) What type of Intent is shown on lines 68 to 70 of ThirdFragment.kt?
+A - Explicit intent
+
+5) Between #4 and #5, which incorporates the more secure technique for implementing an Intent?
+A - ThirdFragment.kt because it implements an explicit intent.
