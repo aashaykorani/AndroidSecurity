@@ -25,7 +25,17 @@ Since the SecondFragment.kt file uses implicit intent, we made changes to that f
 
 ### **Task 1c: Shutting Out The World**
 
-In order to stop other apps from using intents to launch the activities of our app we can use the permission tag in the AndroidManifest.xml file. It declares a security permission that can be used to limit access to specific components or features of applications.
+In order to stop other apps from using intents to launch the activities of our application we can use the `android:exported` attribute of the activities. If this field is set to false, the activity will only be able to be launched by the components of the same application.
+
+However, in order to achieve this, we need to remove the intent filters. This is because intent filters are used to allow activities of your app to interact with other applications in a restricted way which is exactly opposite to what the `android:exported="false"` achieves.
+
+In the below image we have added the attribute and commented out the intent filters from all the activities except the MainActivity. This is because the MainActivity needs to be exported in order to be launched by the android launcher.
+
+![](./Artifacts/task1-c4.png)
+
+![](./Artifacts/task1-c5.png)
+
+In order to further secure our application and cut off the outside world, we can use the permission tag in the AndroidManifest.xml file. It declares a security permission that can be used to limit access to specific components or features of applications.
 
 In the image below, the first line defines the protection level. It indicates the procedure the system should follow when determining whether or not to grant the permission to an application requesting it. In our case, we set the protection level to "signature". This tells the system to grant permission to the activities only if requesting application is signed with the same certificate as the application that declared the permission. If the certificate matches the system will automatically grant the permission. In the second line we give a name to our permission that will be specific to our own app. In the third line, we specify that our app uses the permission mentioned above.
 
