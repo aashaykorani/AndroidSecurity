@@ -93,15 +93,19 @@ Implementing the above changes can help us remediate the vulnerability.
 
 ### **Task 4a**
 
-In order for our application to function we only need 2 permissions, INTERNET and COARSE_LOCATION. The first permission as the name suggests is required to access the internet on the phone and the second permission is used to get an approximate location of the user. This servers the purpose when different regions have different servers and depending upon the location of the user, the traffic needs to be routed.
+In order for our application to function we only need 1 permission - INTERNET. The permission as the name suggests is required to access the internet on the phone.
 
 We do not need the NETWORK_STATE because it is redundant. This is because the NETWORK_STATE permission only gathers information about the state of the network and service provider, etc. Because we request for the INTERNET permission, if it fails, it will anyway throw an error hence we do not need any information about the state of the network.
 
 FINE_LOCATION permission is used to get the exact location of the user. Our application only needs to know the region of the user in order to serve him better, his exact location is not necessary for the app to be functional. Hence we can remove this permission.
 
+COARSE_LOCATION is used to get an approximate location of the user. This is also not required because our app does not have different servers where we direct user traffic to different servers based on the location.
+
 MOCK_LOCATION is used by developers for testing purposes. It is insignificant to have in a production application.
 
-![](./Artifacts/task4-a.png)
+In order to remove the location permission we also had to edit the CardScrollingActivity and the ProductScrollingActivity files and comment out the lines highlighted below.
+
+![](./Artifacts/task4-a1.png)
 
 ### **Task 4b**
 
