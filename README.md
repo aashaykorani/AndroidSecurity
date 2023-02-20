@@ -1,5 +1,10 @@
-# **NYU – CSGY-9163 Application Security - Spring22 – Lab 4**
+# **Android Security**
 
+# Final Report
+
+Click [here](https://github.com/aashaykorani/ank8821-appsec4/blob/master/Report/ank8821-Appsec4-Lab4.md) to view my final report for this project.
+
+<!---
 # **Part 0: Working Repository and Submission**
 ## 1) Synchronize Your Repository and Acquire the Lab Material
 ---
@@ -67,6 +72,7 @@ You must submit your assigment in two places.
          - CA Xiang Me's GitHub handle is `n132`
 
 Timeliness of your submission will be corroborated with your GitHub commit history. Commits made after the assignment's submission deadline will not be considered for grading.
+--->
 
 # **Part 1: The Only Part**
 ## Introduction
